@@ -22,34 +22,36 @@
  * Transitive Dependencies
  */
 
-
 // imported react and reactdom from nodemodule folder
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const heading = React.createElement(
-    "h1",
-    {
-      id: "title",
-    },
-    "heading"
-  );
-  const heading1 = React.createElement(
-    "h1",
-    {
-      id: "title",
-    },
-    "heading1"
-  );
-  
-  const container = React.createElement(
-    "div",
-    {
-      id: "container",
-    },
-    [heading, heading1]
-  );
-  
-  // create root using createRoot
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  // passing react element inside root
-  root.render(container);
+  "h1",
+  { id: "title", key: "heading0" },
+  "Hi, My Name is Abhishek Srivastava"
+);
+const headingOne = React.createElement(
+  "h1",
+  { id: "subTitle", key: "heading1" },
+  "I am a Frontend Developer Using ReactJs"
+);
+
+const container = React.createElement(
+  "div",
+  {
+    id: "container",
+  },
+  [heading, headingOne]
+);
+//React Functional Components
+//component composition 
+const HeadingComponent = () => {
+    return <h1 className="subHeading">I am Learning React</h1>;
+};
+
+// create root using createRoot
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// passing react element inside root
+root.render(container);
+//root.render(<HeadingComponent />);
