@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // This is where Tailwind is included
-import App from './App';
+import './index.css';
+import { RouterProvider } from 'react-router-dom';
+import AppRouter from './mainRouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={AppRouter} />
   </React.StrictMode>
 );

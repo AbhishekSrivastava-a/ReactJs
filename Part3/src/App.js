@@ -1,20 +1,16 @@
-
-import React, { useRef } from 'react';
-import ReactDOM from "react-dom/client";
 import Header from './components/Header';
 import BeforeMainContent from './components/BeforeMainContent';
 import RestaurantList from './components/ResturantList';
 
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="app">
       <Header />
-      <BeforeMainContent />
-      <RestaurantList />
+      <Outlet />
     </div>
   );
 };
-
 
 export default App;

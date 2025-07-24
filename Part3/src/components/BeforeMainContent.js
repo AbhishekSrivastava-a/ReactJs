@@ -69,8 +69,6 @@ const BeforeMainContent = () => {
           {/* Scroll Right */}
         </div>
       </div>
-
-      {/* 5. Attach the ref to the carousel list element */}
       <ul style={styles.carousel} className="carousel" ref={carouselRef}>
         {foodCategories.map((category) => (
           <li key={category.id} style={styles.carouselItem}>

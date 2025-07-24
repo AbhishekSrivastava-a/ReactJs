@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
+
 const navItems = [
-  { id: 1, text: "Search", link: "/search" },
+  { id: 1, text: "About", link: "/about" },
   { id: 2, text: "Offers", link: "/offers" },
   { id: 3, text: "Help", link: "/help" },
   { id: 4, text: "Sign In", link: "/signin" },
   { id: 5, text: "Cart", link: "/cart" },
 ];
+
 const Header = () => {
   const styles = {
     headerContainer: {
@@ -52,22 +55,22 @@ const Header = () => {
     <header style={styles.headerContainer}>
       <div style={styles.headerContent}>
         <div className="logo-container">
-          <a href="/">
+          <Link to="/">
             <img
               style={styles.logoImage}
               src="/assets/download.png"
               alt="Foodor Logo"
             />
-          </a>
+          </Link>
         </div>
         <nav style={styles.nav}>
           <ul style={styles.navList}>
             {navItems.map((item) => (
               <li key={item.id}>
-                <a href={item.link} style={styles.navLink}>
+                <Link to={item.link} style={styles.navLink}>
                   {item.icon}
                   <span>{item.text}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
